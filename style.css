@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    font-family: 'Kumbh+Sans', sans-serif;
+}
+
+p {
+    margin: 0 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;    
+}
+
+.outsideBox {
+    display: none;
+}
+.card {
+    display: flex;
+    width: 29rem;
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+    height: 40rem;
+    padding: 4rem 2rem;
+    margin-top: 10rem;
+    flex-direction: column;
+}
+
+
+.mobileBG{
+    width: 75%;
+    position: absolute;
+    top: -1rem;
+    right: 3.5rem;
+    z-index: 11; 
+}
+
+.mobileWoman{ 
+    width: 75%;
+    position: absolute;
+    top: -10rem;
+    right: 3.5rem;
+    z-index: 13;
+}
+
+.desktopBG{
+    display: none;
+}
+
+
+
+.attribution { margin-top: 20px; font-size: 11px; text-align: center; }
+.attribution a { color: white; }
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.desktopWoman {
+    display: none;
+}
+
+.faqTitle {
+    font-size: 3rem;
+    font-weight: 550;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    
+}
+
+.accordian {
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    color: hsl(240, 6%, 50%);
+}
+
+.active {
+    font-weight: 600;
+    color: black;
+    transition: 0.4s;
+}
+
+.accordian:hover {
+    color: red;
+}
+
+.accordian:after {
+    content: url(images/icon-arrow-down.svg);
+    float: right;
+}
+
+.active:after {
+    content: url(images/icon-arrow-down.svg);
+    transform: rotate(180deg);
+    transition: 0.4s;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    margin-right: 1rem;
+    margin-top: .5rem;
+    color: hsl(240, 6%, 50%);
+    transition: max-height 0.2s ease-out;
+}
+
+
+.faqBorder {
+    height: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+}
+
+
+
+@media only screen and (min-width: 480px) {
+    .card {
+        flex-direction: row;
+        width: 74rem;
+        height: 42rem;
+        padding-left: 0;
+        position: relative;
+        z-index: 0;
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: -10rem;
+        
+    }
+    
+    .faq {
+        width: 35rem;
+        margin-right: 5rem;
+        
+    }
+
+    .faqTitle {
+        text-align: left;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+        
+    }
+
+
+    .topImage {
+        width: 40rem;
+        margin-right: 0;
+        overflow: hidden;
+        
+        position: relative;
+        
+        
+    }
+
+    .desktopWoman{
+        display: inline-block;
+        position: absolute;
+        top: 0rem;
+        left: -7rem;
+        z-index: 10;
+       
+    }
+    
+    .mobileWoman {
+        display: none;
+
+    }
+    .mobileBG{
+       display: none;
+    }
+
+    .desktopBG{
+        display: flex;
+    }
+
+    .outsideBox {
+        display: block;
+        position: absolute;
+        top: 15.5rem;
+        z-index: 12;
+        left: -10rem;
+    }
+}
+
+
+
+
+
+
+
+
